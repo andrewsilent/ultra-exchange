@@ -1,0 +1,45 @@
+{
+  "name": "v2mediafinancepartners",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build && mkdir build",
+    "styles": "node-sass --output-style compressed scss/yourstyle.scss build/css/styles.css",
+    "build": "v2tools-build",
+    "build:stage": "v2tools-build stage",
+    "build:prod": "v2tools-build prod",
+    "build:qa": "v2tools-build qa",
+    "serve": "npm run build && live-server build",
+    "dev": "parallelshell \"npm run dev:sass\" \"npm run dev:server\"",
+    "dev:sass": "node-sass --watch --output-style compressed scss/yourstyle.scss css/styles.css",
+    "dev:server": "live-server --port=3030 --proxy=/js/widgets.min.js:http://localhost:8080/widgets.min.js --proxy=/js/widgets.min.js.map:http://localhost:8080/widgets.min.js.map --proxy=/js/library.min.js:http://localhost:8081/library.min.js --proxy=/js/library.min.js.map:http://localhost:8081/library.min.js.map"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.1",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.8.3",
+    "parallelshell": "^3.0.2",
+    "v2tools": "^1.0.6"
+  },
+  "dependencies": {
+    "apex-library": "~1.1.2",
+    "apex-widgets": "~1.1.4"
+  }
+}

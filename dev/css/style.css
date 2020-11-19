@@ -1,0 +1,754 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, input, textarea, select, button {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2s ease 0s;
+}
+
+a:visited {
+  color: #333;
+}
+
+a:hover, a:active {
+  color: #666;
+  transition: all 0.2s ease 0s;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+  position: relative;
+  -webkit-transition: all 0.5s ease 0.1s;
+  transition: all 0.5s ease 0.1s;
+  font: 400 1.125rem/1.4 'Rubik', sans-serif;
+}
+
+p {
+  font: 400 1.125rem/1.4 'Rubik', sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clear:before, .clear:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  color: #000;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+#wrapper {
+  width: 100%;
+  min-width: 305px;
+  overflow-x: hidden;
+  transition: transform 0.5s ease 0s;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -10;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+}
+
+#offcanvas {
+  width: 360px;
+  height: 100%;
+  position: absolute;
+  transform: translateX(-360px);
+  transition: transform 0.5s ease 0s;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#offcanvas ul li a {
+  display: block;
+  padding: 12px 24px;
+  font: 400 1.125rem/1.4 'Rubik', sans-serif;
+  color: #fff;
+}
+
+#offcanvas ul li a:hover {
+  color: #999;
+}
+
+#offcanvas .logo {
+  padding: 20px;
+}
+
+#offcanvas ul li {
+  border-bottom: 1px solid #555;
+}
+
+#offcanvas ul li a {
+  min-height: 75px;
+  box-sizing: border-box;
+  padding: 25px;
+}
+
+#offcanvas .network {
+  display: block;
+}
+
+#offcanvas .network ul li {
+  display: block;
+}
+
+#offcanvas .network ul li a {
+  display: block;
+  width: 100%;
+  background-position: left;
+  margin-left: 15px;
+}
+
+#offcanvas .network ul li a:hover {
+  filter: brightness(75%);
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1366px;
+  padding: 0 25px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.nav, .network, .ultra, .exchange, .main-menu, .logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav ul li, .network ul li {
+  display: inline-block;
+  list-style: none;
+  vertical-align: middle;
+}
+
+.ultra, .exchange {
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.exchange {
+  background: transparent url("../img/logo.png") center center no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 100px;
+}
+
+.ultra {
+  background: transparent url("../img/icon.png") center center no-repeat;
+  background-size: contain;
+  height: 65px;
+  width: 65px;
+}
+
+.logo {
+  padding-right: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.network ul li a {
+  height: 65px;
+  width: 80px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  filter: brightness(100%);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.network ul li a:hover {
+  filter: brightness(110%);
+}
+
+.network .alpha {
+  background-image: url("../img/logo-1.png");
+}
+
+.network .bravo {
+  background-image: url("../img/logo-2.png");
+}
+
+.network .charlie {
+  background-image: url("../img/logo-3.png");
+}
+
+.network .delta {
+  background-image: url("../img/logo-4.png");
+}
+
+.navigation {
+  padding: 15px 0;
+}
+
+.navigation .container {
+  text-align: justify;
+  vertical-align: middle;
+}
+
+.navigation .container:after {
+  width: 100%;
+  content: '';
+  display: inline-block;
+}
+
+.navigation .container ul li a {
+  display: block;
+  padding: 12px 24px;
+  font: 400 1.125rem/1.4 'Rubik', sans-serif;
+}
+
+.navigation .container .burger {
+  position: relative;
+  height: 24px;
+  width: 35px;
+  cursor: pointer;
+  display: none;
+  vertical-align: middle;
+}
+
+.navigation .container .burger .inner {
+  height: 4px;
+  width: 35px;
+  border-radius: 5px;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.navigation .container .burger .inner:before {
+  content: '';
+  height: 4px;
+  width: 35px;
+  border-radius: 5px;
+  position: absolute;
+  top: -8px;
+  background-color: #333;
+}
+
+.navigation .container .burger .inner:after {
+  content: '';
+  height: 4px;
+  width: 35px;
+  border-radius: 5px;
+  position: absolute;
+  top: 8px;
+  background-color: #333;
+}
+
+.header {
+  background: linear-gradient(90deg, #252569, #1762bb);
+  color: #fff;
+  position: relative;
+}
+
+.header:before {
+  background: transparent url("../img/system.png") 100% 0 no-repeat;
+  background-size: 85%;
+  position: absolute;
+  right: 0;
+  top: 100px;
+  height: 679px;
+  width: 960px;
+  display: block;
+  content: '';
+}
+
+.header:after {
+  background: transparent url("../img/dot.png") center 0 no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 450px;
+  width: 100%;
+  background-size: cover;
+  display: block;
+  content: '';
+}
+
+.header .container {
+  position: relative;
+  text-align: left;
+}
+
+.header .container:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
+.header h1 {
+  font: 700 3rem/1.2 'Rubik', sans-serif;
+  max-width: 610px;
+  z-index: 10;
+  padding-top: 200px;
+  position: relative;
+}
+
+.header .phantom {
+  color: rgba(255, 255, 255, 0.1);
+  font: 700 9rem/1.2 'Rubik', sans-serif;
+  position: absolute;
+  top: 120px;
+  left: -70px;
+  z-index: 1;
+}
+
+.header .start {
+  margin: 80px 0 200px 0;
+  vertical-align: middle;
+}
+
+.header .start .email, .header .start .submit {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 27px;
+  border: none;
+  box-sizing: border-box;
+  max-height: 54px;
+}
+
+.header .start .email {
+  width: 100%;
+  max-width: 480px;
+  font: 400 1.125rem/3.375 'Rubik', sans-serif;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.header .start .email:placeholder {
+  font: 400 1.125rem/3.375 'Rubik', sans-serif;
+}
+
+.header .start .submit {
+  width: 240px;
+  background-color: #1C9CD8;
+  color: #fff;
+  font: 400 1.125rem/3.375rem 'Rubik', sans-serif;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.header .start .submit:hover {
+  background-color: #1C7Cc8;
+}
+
+.header .crypto {
+  padding: 67px 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  position: relative;
+}
+
+.header .crypto .crypto-title {
+  font: 700 1.125rem/1.4rem 'Rubik', sans-serif;
+  margin-bottom: 24px;
+}
+
+.header .crypto .crypto-usd, .header .crypto .crypto-eur, .header .crypto .crypto-ven, .header .crypto .crypto-percent {
+  font: 400 1.125rem/1.4rem 'Rubik', sans-serif;
+  margin-bottom: 8px;
+}
+
+.header .crypto .crypto-usd, .header .crypto .crypto-eur {
+  display: none;
+}
+
+.header .crypto .up {
+  color: #7ED321;
+  font: 400 1.125rem/1.4rem 'Rubik', sans-serif;
+}
+
+.header .crypto .down {
+  color: #D32121;
+  font: 400 1.125rem/1.4rem 'Rubik', sans-serif;
+}
+
+.header .crypto .divider {
+  width: 2px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header .crypto ul {
+  text-align: justify;
+}
+
+.header .crypto ul:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
+.header .crypto ul li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.features .feature {
+  display: inline-block;
+  max-width: 320px;
+  text-align: left;
+  vertical-align: top;
+  margin: 200px 0;
+}
+
+.features .alpha .feature-icon {
+  background: rgba(28, 156, 217, 0.07) url(../img/feature-1.svg) center center no-repeat;
+  color: #1c9cd9;
+}
+
+.features .bravo .feature-icon {
+  background: rgba(228, 8, 126, 0.07) url(../img/feature-2.svg) center center no-repeat;
+  color: #e4087e;
+}
+
+.features .charlie .feature-icon {
+  background: rgba(48, 44, 126, 0.07) url(../img/feature-3.svg) center center no-repeat;
+  color: #302c7e;
+}
+
+.features .feature-icon {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: inline-block;
+  background-size: 50px 50px;
+}
+
+.features .feature-title {
+  font: 400 1.5rem/1.4rem 'Rubik', sans-serif;
+  margin: 35px 0 25px 0;
+}
+
+.features .feature-description {
+  font: 400 1.125rem/1.4rem 'Rubik', sans-serif;
+}
+
+.features .feature-description a {
+  border-bottom: 1px dashed #aaa;
+}
+
+.features .container {
+  text-align: justify;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+.features .container:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
+.offers {
+  margin-top: 200px;
+  margin-bottom: 250px;
+  color: #000;
+  border-radius: 200px;
+  position: relative;
+  text-align: center;
+}
+
+.offers:before {
+  content: '';
+  z-index: -5;
+  background: url("../img/back.png") 0 40% no-repeat;
+  background-size: 1160px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 480px;
+}
+
+.offers:after {
+  content: '';
+  z-index: -10;
+  background-color: #f3f7f8;
+  transform: skewX(35deg) rotate(-9deg) scaleX(1.8) scaleY(1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 200px;
+  height: 100%;
+  width: 100%;
+}
+
+.offers h2 {
+  font: 500 3rem/1.4 'Rubik', sans-serif;
+  padding: 120px 0 34px 0;
+  color: #302C7E;
+  text-align: left;
+}
+
+.offers p {
+  text-align: left;
+}
+
+.offers .steps .step {
+  max-width: 480px;
+  margin-top: 66px;
+  text-align: left;
+}
+
+.offers .steps .step-icon {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  display: inline-block;
+  background-size: 50px 50px;
+  box-shadow: 0 5px 10px 0 rgba(48, 44, 126, 0.3);
+}
+
+.offers .steps .step-title {
+  font: 400 1.5rem/1.4 'Rubik', sans-serif;
+  margin: 32px 0 24px 0;
+}
+
+.offers .steps .alpha .step-icon {
+  background: #fff url(../img/offers-1.svg) center center no-repeat;
+}
+
+.offers .steps .bravo .step-icon {
+  background: #fff url(../img/offers-2.svg) center center no-repeat;
+}
+
+.offers .steps .charlie .step-icon {
+  background: #fff url(../img/offers-3.svg) center center no-repeat;
+}
+
+.offers .offers-readmore {
+  background-color: #1C9CD8;
+  font: 400 1.125rem/3.375rem 'Rubik', sans-serif;
+  color: #fff;
+  width: 240px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 27px;
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+
+.offers .offers-readmore:hover {
+  background-color: #1C7Cc8;
+  transition: all 0.2s ease 0s;
+}
+
+.blog {
+  margin-bottom: 120px;
+}
+
+.blog h2 {
+  font: 500 3rem/1.4 'Rubik', sans-serif;
+  text-align: center;
+  color: #302C7E;
+}
+
+.blog .articles {
+  text-align: justify;
+}
+
+.blog .articles:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
+.blog .article {
+  display: inline-block;
+  max-width: 320px;
+  text-align: left;
+  margin: 30px 0;
+  vertical-align: top;
+}
+
+.blog .article .article-image {
+  height: 160px;
+  width: 100%;
+  max-width: 320px;
+  background-size: contain;
+}
+
+.blog .alpha .article-image {
+  background-image: url("../img/article-1.png");
+}
+
+.blog .bravo .article-image {
+  background-image: url("../img/article-2.png");
+}
+
+.blog .charlie .article-image {
+  background-image: url("../img/article-3.png");
+}
+
+.blog .article-title {
+  font: 400 1.5rem/1.2 'Rubik', sans-serif;
+  margin: 30px 0;
+}
+
+.blog .article-announce {
+  margin-bottom: 25px;
+}
+
+.blog .article-statusbar {
+  text-align: justify;
+}
+
+.blog .article-statusbar:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
+.blog .article-date, .blog .article-readmore {
+  display: inline-block;
+}
+
+.blog .article-date {
+  color: #9b9b9b;
+}
+
+.blog a.article-readmore {
+  color: #1C9CD8;
+}
+
+.blog a.article-readmore:hover {
+  color: #1C7CD8;
+}
+
+.footer {
+  background: linear-gradient(90deg, #252569, #1762bb);
+  color: #fff;
+  text-align: center;
+  padding: 35px 0;
+}
+
+.footer .sitemap {
+  padding-bottom: 25px;
+}
+
+.footer .sitemap ul li {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+.footer .sitemap ul li.divider {
+  width: 2px;
+  background-color: #fff;
+  height: 20px;
+}
+
+.footer .sitemap a {
+  color: #fff;
+  display: block;
+  padding: 0 4px;
+  font: 400 1.125rem/1.4 'Rubik', sans-serif;
+}
+
+.footer .sitemap a:hover {
+  color: #aaa;
+}
+
+.footer .social ul li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 15px;
+  padding-bottom: 25px;
+}
+
+.footer .social ul li a {
+  height: 24px;
+  width: 24px;
+  display: block;
+}
+
+.footer .social ul li a:hover {
+  filter: brightness(80%);
+}
+
+.footer .social ul li .twitter {
+  background: url("../img/twitter.svg") center center no-repeat;
+}
+
+.footer .social ul li .facebook {
+  background: url("../img/facebook.svg") center center no-repeat;
+}
+
+.footer .social ul li .instagram {
+  background: url("../img/instagram.svg") center center no-repeat;
+}
+
+.footer .social ul li .youtube {
+  background: url("../img/youtube.svg") center center no-repeat;
+}
+
+.footer .social ul li .flicker {
+  background: url("../img/flicker.svg") center center no-repeat;
+}

@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700')
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  border: 0
+  font-size: 100%
+  font: inherit
+  margin: 0
+  padding: 0
+  vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, input, textarea, select, button
+  display: block
+
+a
+  text-decoration: none
+  color: #333
+  transition: all 0.2s ease 0s
+  &:visited
+    color: #333
+  &:hover, &:active
+    color: #666
+    transition: all 0.2s ease 0s
+
+*:focus
+  outline: 0
+
+body
+  line-height: 1
+  position: relative
+  -webkit-transition: all 0.5s ease 0.1s
+  transition: all 0.5s ease 0.1s
+  font: 400 1.125rem/1.4 'Rubik', sans-serif
+
+p
+  font: 400 1.125rem/1.4 'Rubik', sans-serif  
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+.clear
+  &:before, &:after
+    content: ''
+    clear: both
+    display: block
+
+.clearfix:after
+  content: ''
+  clear: both
+  display: block
+
+body
+  width: 100%
+  min-height: 100%
+  color: #000
+  position: relative
+  overflow-x: hidden
+  -webkit-font-smoothing: antialiased
+  -moz-font-smoothing: antialiased
+  -ms-font-smoothing: antialiased
+  -o-font-smoothing: antialiased
+  font-smoothing: antialiased
+
+#wrapper
+  width: 100%
+  min-width: 305px
+  overflow-x: hidden
+  transition: transform 0.5s ease 0s
+
+#overlay
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0,0,0,.3)
+  z-index: -10
+  transition: all 0.5s ease 0s
+  opacity: 0
+
+#offcanvas
+  width: 360px
+  height: 100%
+  position: absolute
+  transform: translateX(-360px)
+  transition: transform 0.5s ease 0s
+  background-color: rgba(0,0,0,.9)
+  ul li a
+    display: block
+    padding: 12px 24px
+    font: 400 1.125rem/1.4 'Rubik', sans-serif
+    color: #fff
+    &:hover
+      color: #999
+  .logo
+    padding: 20px
+  ul li 
+    border-bottom: 1px solid #555
+    a
+      min-height: 75px
+      box-sizing: border-box 
+      padding: 25px
+  .network
+    display: block
+    ul li 
+      display: block
+      a
+        display: block
+        width: 100%
+        background-position: left
+        margin-left: 15px
+        &:hover
+          filter: brightness(75%)
+
+.container
+  margin: 0 auto
+  width: 100%
+  max-width: 1366px
+  padding: 0 25px
+  box-sizing: border-box
+  position: relative
+
+.nav, .network, .ultra, .exchange, .main-menu, .logo
+  display: inline-block
+  vertical-align: middle
+.nav ul li, .network ul li
+  display: inline-block
+  list-style: none
+  vertical-align: middle
+.ultra, .exchange
+  background-size: contain
+  box-sizing: border-box
+.exchange
+  background: transparent url('../img/logo.png') center center no-repeat
+  background-size: contain
+  height: 50px
+  width: 100px
+.ultra
+  background: transparent url('../img/icon.png') center center no-repeat
+  background-size: contain
+  height: 65px
+  width: 65px
+.logo
+  padding-right: 20px
+  display: inline-block
+  vertical-align: middle
+
+.network
+  ul li a
+    height: 65px
+    width: 80px
+    padding: 0 12px
+    box-sizing: border-box
+    filter: brightness(100%)
+    background-position: center center
+    background-repeat: no-repeat
+    &:hover
+      filter: brightness(110%)
+  .alpha
+    background-image: url('../img/logo-1.png')
+  .bravo
+    background-image: url('../img/logo-2.png')
+  .charlie
+    background-image: url('../img/logo-3.png')
+  .delta
+    background-image: url('../img/logo-4.png')
+
+.navigation
+  padding: 15px 0
+  .container
+    text-align: justify
+    vertical-align: middle
+    &:after
+      width: 100%
+      content: ''
+      display: inline-block
+    ul li a
+      display: block
+      padding: 12px 24px
+      font: 400 1.125rem/1.4 'Rubik', sans-serif
+    .burger
+      position: relative
+      height: 24px
+      width: 35px
+      cursor: pointer
+      display: none
+      vertical-align: middle
+      .inner
+        height: 4px
+        width: 35px
+        border-radius: 5px
+        background-color: #333
+        position: absolute
+        top: 50%
+        margin-top: -2px
+        &:before
+          content: ''
+          height: 4px
+          width: 35px
+          border-radius: 5px
+          position: absolute
+          top: -8px
+          background-color: #333
+        &:after
+          content: ''
+          height: 4px
+          width: 35px
+          border-radius: 5px
+          position: absolute
+          top: 8px
+          background-color: #333
+
+.header
+  background: linear-gradient(90deg, #252569, #1762bb)
+  color: #fff
+  position: relative
+  &:before
+    background: transparent url('../img/system.png') 100% 0 no-repeat
+    background-size: 85%
+    position: absolute
+    right: 0
+    top: 100px
+    height: 679px
+    width: 960px
+    display: block
+    content: ''
+  &:after
+    background: transparent url('../img/dot.png') center 0 no-repeat
+    position: absolute
+    left: 0
+    bottom: 0
+    height: 450px
+    width: 100%
+    background-size: cover
+    display: block
+    content: ''
+  .container
+    position: relative
+    text-align: left
+    &:after
+      content: ''
+      width: 100%
+      display: inline-block
+  h1
+    font: 700 3rem/1.2 'Rubik', sans-serif
+    max-width: 610px
+    z-index: 10
+    padding-top: 200px
+    position: relative
+  .phantom
+    color: rgba(255,255,255,.1)
+    font: 700 9rem/1.2 'Rubik', sans-serif
+    position: absolute
+    top: 120px
+    left: -70px
+    z-index: 1
+  .start
+    margin: 80px 0 200px 0
+    vertical-align: middle
+    .email, .submit
+      display: inline-block
+      vertical-align: middle   
+      border-radius: 27px
+      border: none
+      box-sizing: border-box
+      max-height: 54px
+    .email
+      width: 100%
+      max-width: 480px
+      font: 400 1.125rem/3.375 'Rubik', sans-serif
+      padding: 0 20px
+      box-sizing: border-box
+      margin-right: 24px
+      margin-bottom: 24px
+      &:placeholder      
+        font: 400 1.125rem/3.375 'Rubik', sans-serif        
+    .submit
+      width: 240px
+      background-color: #1C9CD8
+      color: #fff
+      font: 400 1.125rem/3.375rem 'Rubik', sans-serif
+      margin-bottom: 24px
+      text-align: center
+      &:hover
+        background-color: #1C7Cc8
+  .crypto
+    padding: 67px 0
+    box-sizing: border-box
+    background-color: rgba(0,0,0,.2)
+    z-index: 10
+    position: relative
+    .crypto-title
+      font: 700 1.125rem/1.4rem 'Rubik', sans-serif
+      margin-bottom: 24px
+    .crypto-usd, .crypto-eur, .crypto-ven, .crypto-percent
+      font: 400 1.125rem/1.4rem 'Rubik', sans-serif
+      margin-bottom: 8px
+    .crypto-usd, .crypto-eur
+      display: none
+    .up
+      color: #7ED321
+      font: 400 1.125rem/1.4rem 'Rubik', sans-serif
+    .down
+      color: #D32121
+      font: 400 1.125rem/1.4rem 'Rubik', sans-serif 
+    .divider
+      width: 2px
+      height: 100px
+      background-color: rgba(0,0,0,.5)
+    ul
+      text-align: justify
+      &:after
+        content: ''
+        width: 100%
+        display: inline-block
+    ul li
+      display: inline-block
+      vertical-align: top
+      
+.features
+  .feature
+    display: inline-block
+    max-width: 320px
+    text-align: left
+    vertical-align: top
+    margin: 200px 0
+  .alpha .feature-icon
+    background: rgba(28,156,217,.07) url(../img/feature-1.svg) center center no-repeat
+    color: rgba(28,156,217,1)
+  .bravo .feature-icon
+    background: rgba(228,8,126,.07) url(../img/feature-2.svg) center center no-repeat
+    color: rgba(228,8,126,1)
+  .charlie .feature-icon
+    background: rgba(48,44,126,.07) url(../img/feature-3.svg) center center no-repeat
+    color: rgba(48,44,126,1)
+  .feature-icon
+    height: 120px
+    width: 120px
+    border-radius: 50%
+    display: inline-block
+    background-size: 50px 50px
+  .feature-title
+    font: 400 1.5rem/1.4rem 'Rubik', sans-serif
+    margin: 35px 0 25px 0
+  .feature-description
+    font: 400 1.125rem/1.4rem 'Rubik', sans-serif
+    a
+      border-bottom: 1px dashed #aaa
+  .container
+    text-align: justify
+    padding: 0 60px
+    box-sizing: border-box
+    &:after
+      content: ''
+      width: 100%
+      display: inline-block
+
+.offers
+  margin-top: 200px
+  margin-bottom: 250px
+  color: #000
+  border-radius: 200px
+  position: relative
+  text-align: center
+  &:before
+    content: ''
+    z-index: -5
+    background: url('../img/back.png') 0 40% no-repeat
+    background-size: 1160px
+    height: 100%
+    width: 100%
+    position: absolute
+    top: 0
+    left: 480px
+  &:after
+    content: ''
+    z-index: -10
+    background-color: #f3f7f8
+    transform: skewX(35deg) rotate(-9deg) scaleX(1.8) scaleY(1)
+    position: absolute
+    top: 0
+    left: 0
+    border-radius: 200px
+    height: 100%
+    width: 100%
+  h2
+    font: 500 3rem/1.4 'Rubik', sans-serif
+    padding: 120px 0 34px 0
+    color: #302C7E
+    text-align: left
+  p
+    text-align: left
+  .steps
+    .step
+      max-width: 480px
+      margin-top: 66px
+      text-align: left
+    .step-icon
+      height: 80px
+      width: 80px
+      border-radius: 50%
+      display: inline-block
+      background-size: 50px 50px
+      box-shadow: 0 5px 10px 0 rgba(48,44,126,.3)
+    .step-title
+      font: 400 1.5rem/1.4 'Rubik', sans-serif
+      margin: 32px 0 24px 0
+    .alpha .step-icon
+      background: #fff url(../img/offers-1.svg) center center no-repeat
+    .bravo .step-icon
+      background: #fff url(../img/offers-2.svg) center center no-repeat
+    .charlie .step-icon
+      background: #fff url(../img/offers-3.svg) center center no-repeat
+  .offers-readmore
+    background-color: #1C9CD8
+    font: 400 1.125rem/3.375rem 'Rubik', sans-serif    
+    color: #fff
+    width: 240px
+    display: inline-block
+    text-align: center
+    border-radius: 27px
+    margin-top: 90px
+    margin-bottom: 30px
+    &:hover
+      background-color: #1C7Cc8
+      transition: all 0.2s ease 0s
+
+.blog
+  margin-bottom: 120px
+  h2
+    font: 500 3rem/1.4 'Rubik', sans-serif
+    text-align: center
+    color: #302C7E
+  .articles
+    text-align: justify
+    &:after
+      content: ''
+      width: 100%
+      display: inline-block
+  .article
+    display: inline-block
+    max-width: 320px
+    text-align: left
+    margin: 30px 0
+    vertical-align: top    
+    .article-image
+      height: 160px
+      width: 100%
+      max-width: 320px
+      background-size: contain
+  .alpha .article-image
+    background-image: url('../img/article-1.png')
+  .bravo .article-image
+    background-image: url('../img/article-2.png')
+  .charlie .article-image
+    background-image: url('../img/article-3.png')
+  .article-title
+    font: 400 1.5rem/1.2 'Rubik', sans-serif
+    margin: 30px 0
+  .article-announce
+    margin-bottom: 25px
+  .article-statusbar
+    text-align: justify
+    &:after
+      content: ''
+      width: 100%
+      display: inline-block
+  .article-date, .article-readmore
+    display: inline-block
+  .article-date
+    color: #9b9b9b
+  a.article-readmore
+    color: #1C9CD8
+    &:hover
+      color: #1C7CD8
+
+.footer
+  background: linear-gradient(90deg, #252569, #1762bb);
+  color: #fff
+  text-align: center
+  padding: 35px 0
+  .sitemap
+    padding-bottom: 25px
+    ul li
+      display: inline-block
+      vertical-align: middle
+      font-size: 0
+      &.divider
+        width: 2px
+        background-color: #fff
+        height: 20px
+    a
+      color: #fff
+      display: block
+      padding: 0 4px
+      font: 400 1.125rem/1.4 'Rubik', sans-serif
+      &:hover
+        color: #aaa
+  .social
+    ul li
+      display: inline-block
+      vertical-align: middle
+      margin: 10px 15px
+      padding-bottom: 25px
+      a
+        height: 24px
+        width: 24px
+        display: block
+        &:hover
+          filter: brightness(80%)
+      .twitter
+        background: url('../img/twitter.svg') center center no-repeat
+      .facebook
+        background: url('../img/facebook.svg') center center no-repeat
+      .instagram
+        background: url('../img/instagram.svg') center center no-repeat
+      .youtube
+        background: url('../img/youtube.svg') center center no-repeat
+      .flicker
+        background: url('../img/flicker.svg') center center no-repeat
